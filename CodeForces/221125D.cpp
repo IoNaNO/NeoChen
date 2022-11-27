@@ -7,7 +7,7 @@
   */
 #include<bits/stdc++.h>
 using namespace std;
-
+typedef long long ll;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -18,13 +18,13 @@ int main() {
     while(tt--){
         int n;
         cin>>n;
-        int range=n/2*3;
-        int tar=0;
-        int avg=0;
+        ll range=n/2*3;
+        ll tar=0;
+        ll avg=0;
         while(true){
             avg=range*range/n;
             tar=range*range-avg*n;
-            if((range-tar)%2==0){
+            if((range-tar)%2==0&&(range-tar)>n){
                 break;
             }
             else{
