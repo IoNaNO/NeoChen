@@ -23,10 +23,6 @@ const int PRIMES[] = {
 };
 
 class Solution {
-    private:
-    int gcd(int a, int b){
-        return b==0?a:gcd(b,a%b);
-    }
 public:
     int findValidSplit(vector<int>& nums) {
         int n=nums.size();
@@ -48,7 +44,6 @@ public:
             bool flag=true;
             for(auto&it:primap){
                 if(it.second.size()>1){
-                    // cout<<"De:"<<*it.second.begin()<<' '<<*(--it.second.end());
                     if(i<*(it.second.begin())){
                         continue;
                     }
